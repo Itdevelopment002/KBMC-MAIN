@@ -33,7 +33,7 @@ const Nuhm = () => {
       <section className="departments-style-two alternat-2 nuhm_inner">
         <div className="auto-container">
           <div className="content-two">
-            <h3 className="color_blue">National Urban Health Mission (NUHM)</h3>
+            <h3 className="color_blue nuhm heading-margin">National Urban Health Mission (NUHM)</h3>
             <br />
             <h5 className="mb-3">
               NUHM envisages to meet health care needs of the urban population

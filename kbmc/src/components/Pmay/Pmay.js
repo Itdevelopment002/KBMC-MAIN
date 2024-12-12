@@ -42,7 +42,7 @@ const Pmay = () => {
 
       <section className="service-style-four">
         <div className="auto-container">
-          <h4 className="pb-3 color_blue">Introduction</h4>
+          <h4 className="pb-3 color_blue pmay-heading-margin">Introduction</h4>
           <p className="text-black">
             The Prime Minister's Housing Scheme in the state is based on the
             concept of "Homes for All". Pradhan Mantri Awas Yojana of the
