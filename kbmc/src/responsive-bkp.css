@@ -868,9 +868,16 @@
     .service-style-four{
       padding: 58px 0px 40px 0px;
     }
-    .electric-heading-margin{
+    .heading-margin{
       margin-top: 25px !important;
     }
+    .nuhm-heading-margin{
+      margin-top: 20px !important;
+    }
+    .pmay-heading-margin{
+      margin-top: 20px !important;
+    }
+  
   
     .sortable-masonry .filters .filter-tabs li span{
       bottom: 30px;

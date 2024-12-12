@@ -35,7 +35,7 @@ const Amrut = () => {
 
       <section className="service-style-four">
         <div className="auto-container">
-          <h4>Ulb Code- 802792</h4>
+          <h4 className="heading-margin">Ulb Code- 802792</h4>
           <h4 className="pb-3 pt-2 color_blue">
             Atal Mission for Rejuvenation and Urban Transformation (Amrit)
             Mission (AMRUT)
