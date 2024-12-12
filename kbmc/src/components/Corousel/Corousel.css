@@ -1,0 +1,33 @@
+.banner-section {
+    overflow: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  .banner-carousel {
+    position: relative;
+    max-width: 100%; /* Ensure the carousel doesn't exceed the screen width */
+    margin: 0 auto; /* Center the carousel */
+  }
+  
+  .slide-item {
+    height: 100%; /* Ensure the slides take full height */
+  }
+  
+  .image-layer {
+    height: 100%; /* Make sure the image layer covers the entire slide */
+    background-size: cover; /* Ensure the background image covers the slide */
+    background-position: center; /* Center the background image */
+  }
+  
+  @media (max-width: 650px) {
+    .banner-carousel .slide-item {
+      padding: 90px 0px 150px 0px !important;
+  }
+}
+
+@media(max-width: 499px) {
+  .banner-carousel .slide-item .image-layer {
+      top: 40px !important;
+      height: 65% !important;
+  }
+}
+  

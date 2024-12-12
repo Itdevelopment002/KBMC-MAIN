@@ -1,0 +1,77 @@
+.client-logo-slider {
+    position: relative;
+    padding-right: 0px !important;
+    margin-right: 0px !important;
+  }
+  .custom-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background for visibility */
+    border-radius: 3px;
+    border:1px solid rgb(177, 177, 177);
+    padding: 2px 7px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .custom-arrow svg {
+    color: #000000; /* White icon for better contrast */
+  }
+  
+  .custom-prev-arrow {
+    left: -40px; /* Adjust this value to control distance from the slider */
+  }
+  
+  .custom-next-arrow {
+    right: -0px; /* Adjust this value to control distance from the slider */
+  }
+  
+  .custom-arrow:hover {
+    background-color: rgba(85, 167, 197, 0.8); /* Darker background on hover */
+  }
+
+  @media (max-width: 992px) {
+   
+    .client-logo-slider {
+      position: relative;
+      margin-right: 48px !important;
+    }
+
+    
+    .custom-next-arrow {
+      right: -40px; /* Adjust this value to control distance from the slider */
+    }
+  }
+  
+/* Add margin for slides when less than 480px */
+@media (max-width: 667px) {
+  .logo-slide img {
+    max-height: 90%; /* Maintain aspect ratio */
+    max-width: 90%; /* Ensure it does not exceed the container */
+    object-fit: contain; /* Ensures the image fits without distortion */
+  }
+  .client-logo-slider {
+    position: relative;
+    margin-right: 38px !important;
+    padding-right: 10px !important;
+  }
+  .client-logo-slider{
+    margin-top: -50px !important;
+    padding-top: 0px !important;
+  }
+  .custom-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background for visibility */
+    border-radius: 3px;
+    border:1px solid rgb(177, 177, 177);
+    padding: 0px 2px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .custom-next-arrow {
+    right: -30px; /* Adjust this value to control distance from the slider */
+  }
+}

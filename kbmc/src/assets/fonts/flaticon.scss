@@ -1,0 +1,105 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?7fec97fed4f504834dead3ab67f230b3") format("truetype"),
+url("./flaticon.woff?7fec97fed4f504834dead3ab67f230b3") format("woff"),
+url("./flaticon.woff2?7fec97fed4f504834dead3ab67f230b3") format("woff2"),
+url("./flaticon.eot?7fec97fed4f504834dead3ab67f230b3#iefix") format("embedded-opentype"),
+url("./flaticon.svg?7fec97fed4f504834dead3ab67f230b3#flaticon_mycollection") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "down-arrow": "\f101",
+    "star": "\f102",
+    "play": "\f103",
+    "quotation": "\f104",
+    "cross": "\f105",
+    "right-chevron": "\f106",
+    "navigation": "\f107",
+    "sharing": "\f108",
+    "up-chevron": "\f109",
+    "mail": "\f10a",
+    "alarm": "\f10b",
+    "language": "\f10c",
+    "star-1": "\f10d",
+    "newspaper": "\f10e",
+    "schedule-button": "\f10f",
+    "newspaper-1": "\f110",
+    "quote": "\f111",
+    "play-button": "\f112",
+    "more": "\f113",
+    "down-chevron": "\f114",
+);
+
+.flaticon-down-arrow:before {
+    content: map-get($flaticon-map, "down-arrow");
+}
+.flaticon-star:before {
+    content: map-get($flaticon-map, "star");
+}
+.flaticon-play:before {
+    content: map-get($flaticon-map, "play");
+}
+.flaticon-quotation:before {
+    content: map-get($flaticon-map, "quotation");
+}
+.flaticon-cross:before {
+    content: map-get($flaticon-map, "cross");
+}
+.flaticon-right-chevron:before {
+    content: map-get($flaticon-map, "right-chevron");
+}
+.flaticon-navigation:before {
+    content: map-get($flaticon-map, "navigation");
+}
+.flaticon-sharing:before {
+    content: map-get($flaticon-map, "sharing");
+}
+.flaticon-up-chevron:before {
+    content: map-get($flaticon-map, "up-chevron");
+}
+.flaticon-mail:before {
+    content: map-get($flaticon-map, "mail");
+}
+.flaticon-alarm:before {
+    content: map-get($flaticon-map, "alarm");
+}
+.flaticon-language:before {
+    content: map-get($flaticon-map, "language");
+}
+.flaticon-star-1:before {
+    content: map-get($flaticon-map, "star-1");
+}
+.flaticon-newspaper:before {
+    content: map-get($flaticon-map, "newspaper");
+}
+.flaticon-schedule-button:before {
+    content: map-get($flaticon-map, "schedule-button");
+}
+.flaticon-newspaper-1:before {
+    content: map-get($flaticon-map, "newspaper-1");
+}
+.flaticon-quote:before {
+    content: map-get($flaticon-map, "quote");
+}
+.flaticon-play-button:before {
+    content: map-get($flaticon-map, "play-button");
+}
+.flaticon-more:before {
+    content: map-get($flaticon-map, "more");
+}
+.flaticon-down-chevron:before {
+    content: map-get($flaticon-map, "down-chevron");
+}

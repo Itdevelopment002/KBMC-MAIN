@@ -1,0 +1,15 @@
+/* PhotoGallery.css */
+
+.glightbox img {
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+/* Slightly enlarge the images when hovered */
+.glightbox img:hover {
+    transform: scale(1.05); /* Increase size by 5% on hover */
+}
+
+/* Ensure GLightbox background is visible and darker */
+.glightbox {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background */
+}

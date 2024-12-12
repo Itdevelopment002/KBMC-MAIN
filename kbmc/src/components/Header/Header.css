@@ -1,0 +1,99 @@
+.mobile-menu {
+    max-height: 100vh; 
+    overflow-y: auto; 
+    -webkit-overflow-scrolling: touch; 
+}
+
+.mobile-menu li ul {
+    max-height: auto; 
+    overflow-y: auto; 
+    -webkit-overflow-scrolling: touch; 
+    scrollbar-width: thin; 
+}
+
+.mobile-menu li ul::-webkit-scrollbar {
+    width: 6px; 
+}
+
+.mobile-menu li ul::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3); 
+    border-radius: 10px;
+}
+
+.mobile-menu li ul::-webkit-scrollbar-track {
+    background-color: transparent; 
+}
+.mobile-menu li.dropdown ul {
+    overflow: hidden; 
+}
+
+.mobile-menu li.dropdown ul::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.current {
+    font-weight: bold;
+    color: #007bff; /* Highlight color */
+  }
+  
+  .single-menu {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .single-menu.current {
+    color: #007bff; /* Active menu item color */
+  }
+
+  /* dropdown */
+/* The dropdown icon points downward by default */
+/* Style for the dropdown icon */
+.dropdown-icon {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid #003366;
+    border-bottom: 2px solid #003366;
+    transform: rotate(-45deg); /* Points downward by default */
+    margin-left: 10px;
+    margin-top: -5px;
+    vertical-align: middle;
+    transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth transition for border and background */
+  }
+  
+  /* Hover effect on the li element */
+  .main-menu .navigation .dropdown:hover .dropdown-icon {
+    border-color: #fff; /* Change border color to white */
+  }
+  
+
+  
+  /* Dropdown menu style */
+  .dropdown-menu {
+    display: none; /* Hide by default */
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Hide menu initially */
+  }
+  
+  /* Show dropdown menu when the parent is active/open */
+  .dropdown.open .dropdown-menu {
+    display: block; /* Show the menu when the dropdown is active */
+    opacity: 1; /* Fade in the dropdown */
+  }
+
+
+  .navigation li {
+    margin-right: 5px !important; /* Set your desired space (default is often higher) */
+  }
+  
+  /* Optional: Remove margin on the last item to prevent extra space */
+  .navigation li:last-child {
+    margin-right: 0;
+  }
+  
+  
+
+
+  
