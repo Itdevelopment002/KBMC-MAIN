@@ -128,7 +128,7 @@ const Header = ({ onLogout, userDepartment }) => {
       <div className="main-wrapper">
         <div className="header">
           <div className="header-left">
-            <Link to="#." className="logo">
+            <Link to="/home" className="logo">
               KBMC
             </Link>
           </div>
