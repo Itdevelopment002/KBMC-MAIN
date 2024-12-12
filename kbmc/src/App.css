@@ -387,6 +387,7 @@ img {
 .pagination{
   position: relative;
   display: block;
+  margin-bottom: 10px;
 }
 
 .pagination li{
