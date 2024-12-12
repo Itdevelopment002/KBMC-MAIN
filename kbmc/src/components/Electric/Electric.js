@@ -47,7 +47,7 @@ const Electric = () => {
       <br /> <br />
       <section className="service-style-four">
         <div className="auto-container">
-          <h5 className="pb-4 fs-5 fw-none">
+          <h5 className="pb-4 fs-5 fw-none electric-heading-margin">
             In the Kulgaon Badlapur Municipal Council area, there are a total of
             15418 lamps in the east and west areas and the maintenance of the
             said lamps is done through the municipal council for the eastern

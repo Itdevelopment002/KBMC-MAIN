@@ -868,6 +868,9 @@
     .service-style-four{
       padding: 58px 0px 40px 0px;
     }
+    .electric-heading-margin{
+      margin-top: 25px !important;
+    }
   
     .sortable-masonry .filters .filter-tabs li span{
       bottom: 30px;
@@ -951,7 +954,7 @@
     }
   
     .event-details{
-      padding-top: 0px;
+      padding-top: 60px;
       padding-bottom: 0px;
     }
   
