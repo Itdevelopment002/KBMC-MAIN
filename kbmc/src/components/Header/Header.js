@@ -186,7 +186,7 @@ const Header = () => {
             <div className="row" style={{ alignItems: "center" }}>
               <div className="col-md-5 col-xl-5 text-start"></div>
               <div className="col-md-2 col-xl-2">
-                <figure className="logo text-center">
+                <figure className="logo text-center custum-logo">
                   <Link to="#.">
                     <img src={img1} alt="logo" style={{ width: "50px" }} />
                   </Link>

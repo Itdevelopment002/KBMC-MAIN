@@ -93,7 +93,17 @@
     margin-right: 0;
   }
   
-  
+  @media screen and (max-width: 767px) {
 
+    .custum-logo {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      height: 100% !important; /* Matches the parent's height */
+      margin-bottom:-25px ;
+      margin-top: 5px;
+    }
+  }
+  
 
   
