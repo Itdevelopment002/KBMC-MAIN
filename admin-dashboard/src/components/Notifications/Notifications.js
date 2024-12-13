@@ -187,7 +187,7 @@ const Notifications = () => {
                                 Approve
                               </button>{" "}
                               <button
-                                className="btn btn-danger btn-sm"
+                                className="btn btn-danger btn-sm m-t-10"
                                 onClick={() =>
                                   handleDisapprove(
                                     notification.id,
