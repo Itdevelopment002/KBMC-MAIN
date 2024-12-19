@@ -9,7 +9,6 @@ const Departments = () => {
     const [selectedDepartment, setSelectedDepartment] = useState(null);
     const [editedName, setEditedName] = useState('');
     const [editedHod, setEditedHod] = useState('');
-    const [editedLink, setEditedLink] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
     const [departmentsPerPage] = useState(5);
 
@@ -45,7 +44,6 @@ const Departments = () => {
         setSelectedDepartment(department.id);
         setEditedName(department.name);
         setEditedHod(department.hod);
-        setEditedLink(department.link);
         setShowEditModal(true);
     };
 
@@ -54,7 +52,6 @@ const Departments = () => {
             await api.put(`/departments/${selectedDepartment}`, {
                 name: editedName,
                 hod: editedHod,
-                link: editedLink,
             });
             setShowEditModal(false);
             fetchDepartments();
@@ -101,7 +98,6 @@ const Departments = () => {
                                                     <th>Sr. No.</th>
                                                     <th>Departments Name</th>
                                                     <th>Name of HOD</th>
-                                                    <th>Link</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -111,7 +107,6 @@ const Departments = () => {
                                                         <td>{indexOfFirstDepartment + index + 1}</td>
                                                         <td>{department.name}</td>
                                                         <td>{department.hod}</td>
-                                                        <td>{department.link}</td>
                                                         <td>
                                                         <button
                                                                 className="btn btn-success btn-sm m-t-10"
@@ -192,15 +187,6 @@ const Departments = () => {
                                                     className="form-control"
                                                     value={editedHod}
                                                     onChange={(e) => setEditedHod(e.target.value)}
-                                                />
-                                            </div>
-                                            <div className="form-group">
-                                                <label>Link</label>
-                                                <input
-                                                    type="text"
-                                                    className="form-control"
-                                                    value={editedLink}
-                                                    onChange={(e) => setEditedLink(e.target.value)}
                                                 />
                                             </div>
                                         </form>

@@ -5,7 +5,6 @@ import api from "../api";
 const AddDepartments = () => {
   const [departmentName, setDepartmentName] = useState("");
   const [departmentHod, setDepartmentHod] = useState("");
-  const [departmentLink, setDepartmentLink] = useState("");
   //eslint-disable-next-line
   const [errorMessage, setErrorMessage] = useState("");
   const [errors, setErrors] = useState({});
@@ -17,8 +16,6 @@ const AddDepartments = () => {
       newErrors.departmentName = "Department name is required.";
     if (!departmentHod.trim())
       newErrors.departmentHod = "Name of HOD is required.";
-    if (!departmentLink.trim())
-      newErrors.departmentLink = "Department link is required.";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -33,12 +30,10 @@ const AddDepartments = () => {
       const response = await api.post("/departments", {
         name: departmentName,
         hod: departmentHod,
-        link: departmentLink,
       });
 
       setDepartmentName("");
       setDepartmentHod("");
-      setDepartmentLink("");
       navigate("/departments");
     } catch (error) {
       console.error("Error adding department:", error);
@@ -119,30 +114,6 @@ const AddDepartments = () => {
                         {errors.departmentHod && (
                           <div className="invalid-feedback">
                             {errors.departmentHod}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                    <div className="form-group row">
-                      <label className="col-form-label col-md-3">
-                        Department Link <span className="text-danger">*</span>
-                      </label>
-                      <div className="col-md-4">
-                        <input
-                          type="text"
-                          className={`form-control ${
-                            errors.departmentLink ? "is-invalid" : ""
-                          }`}
-                          placeholder="Enter department link"
-                          value={departmentLink}
-                          onChange={handleFieldChange(
-                            setDepartmentLink,
-                            "departmentLink"
-                          )}
-                        />
-                        {errors.departmentLink && (
-                          <div className="invalid-feedback">
-                            {errors.departmentLink}
                           </div>
                         )}
                       </div>
