@@ -4,19 +4,9 @@ import api from "../api";
 import { Link } from "react-router-dom";
 
 const Departments = () => {
-  const [departments, setDepartments] = useState([]);
   const [deptData, setDeptData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 9;
-
-  const fetchDepartments = async () => {
-    const response = await api.get("/public_disclosure");
-    setDepartments(response.data);
-  };
-
-  useEffect(() => {
-    fetchDepartments();
-  }, []);
 
   const fetchDeptDatas = async () => {
     try {
@@ -31,9 +21,9 @@ const Departments = () => {
     fetchDeptDatas();
   }, []);
 
-  const totalPages = Math.ceil(departments.length / itemsPerPage);
+  const totalPages = Math.ceil(deptData.length / itemsPerPage);
 
-  const currentDepartments = departments.slice(
+  const currentDepartments = deptData.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
@@ -72,12 +62,7 @@ const Departments = () => {
       <section className="departments-style-two alternat-2">
         <div className="auto-container">
           <div className="row clearfix">
-            {currentDepartments.map((department, index) => {
-              const matchingDept = deptData.find(
-                (dept) => dept.name === department.department_name
-              );
-
-              return (
+            {currentDepartments.map((department, index) => (
                 <div
                   key={department.id}
                   className="col-lg-4 col-md-12 col-sm-12 departments-block"
@@ -88,34 +73,34 @@ const Departments = () => {
                         <h3>
                           <Link
                             to={
-                              department?.department_name ===
+                              department?.name ===
                               "General Admin Department"
                                 ? "/general-admin-department"
-                                : department?.department_name ===
+                                : department?.name ===
                                   "Town Planning"
                                 ? "/town-planning"
-                                : `/${department?.department_name
+                                : `/${department?.name
                                     .toLowerCase()
                                     .replace(/\s+/g, "-")}`
                             }
                             state={{ id: department?.id }}
                           >
-                            {department?.department_name}
+                            {department?.name}
                           </Link>
                         </h3>
                         <p>
-                          Name of HOD: {matchingDept ? matchingDept.hod : ""}
+                          Name of HOD: {department?.hod}
                         </p>
                         <div className="link-box">
                           <Link
                             to={
-                              department?.department_name ===
+                              department?.name ===
                               "General Admin Department"
                                 ? "/general-admin-department"
-                                : department?.department_name ===
+                                : department?.name ===
                                   "Town Planning"
                                 ? "/town-planning"
-                                : `/${department?.department_name
+                                : `/${department?.name
                                     .toLowerCase()
                                     .replace(/\s+/g, "-")}`
                             }
@@ -128,8 +113,7 @@ const Departments = () => {
                     </div>
                   </div>
                 </div>
-              );
-            })}
+            ))}
           </div>
         </div>
         <div className="pagination-wrapper centred">
