@@ -4,9 +4,19 @@ import api from "../api";
 import { Link } from "react-router-dom";
 
 const Departments = () => {
+  const [departments, setDepartments] = useState([]);
   const [deptData, setDeptData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 9;
+
+  const fetchDepartments = async () => {
+    const response = await api.get("/public_disclosure");
+    setDepartments(response.data);
+  };
+
+  useEffect(() => {
+    fetchDepartments();
+  }, []);
 
   const fetchDeptDatas = async () => {
     try {
@@ -23,15 +33,10 @@ const Departments = () => {
 
   const totalPages = Math.ceil(deptData.length / itemsPerPage);
 
-  const currentDepartments = deptData.slice(
+  const currentDeptData = deptData.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
-
-  // eslint-disable-next-line
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
 
   return (
     <div>
@@ -62,7 +67,26 @@ const Departments = () => {
       <section className="departments-style-two alternat-2">
         <div className="auto-container">
           <div className="row clearfix">
-            {currentDepartments.map((department, index) => (
+            {currentDeptData.map((department) => {
+              // Find the matching department from the /public_disclosure data
+              const matchingDepartment = departments.find(
+                (dept) => dept.department_name === department.name
+              );
+
+              // Determine the URL and state to pass
+              const departmentLink = matchingDepartment
+                ? department.name === "General Admin Department"
+                  ? "/general-admin-department"
+                  : department.name === "Town Planning"
+                  ? "/town-planning"
+                  : `/${department.name.toLowerCase().replace(/\s+/g, "-")}`
+                : "#.";
+
+              const departmentState = matchingDepartment
+                ? { id: matchingDepartment.id }
+                : null;
+
+              return (
                 <div
                   key={department.id}
                   className="col-lg-4 col-md-12 col-sm-12 departments-block"
@@ -71,41 +95,13 @@ const Departments = () => {
                     <div className="inner-box">
                       <div className="content-box">
                         <h3>
-                          <Link
-                            to={
-                              department?.name ===
-                              "General Admin Department"
-                                ? "/general-admin-department"
-                                : department?.name ===
-                                  "Town Planning"
-                                ? "/town-planning"
-                                : `/${department?.name
-                                    .toLowerCase()
-                                    .replace(/\s+/g, "-")}`
-                            }
-                            state={{ id: department?.id }}
-                          >
-                            {department?.name}
+                          <Link to={departmentLink} state={departmentState}>
+                            {department.name}
                           </Link>
                         </h3>
-                        <p>
-                          Name of HOD: {department?.hod}
-                        </p>
+                        <p>Name of HOD: {department.hod || "N/A"}</p>
                         <div className="link-box">
-                          <Link
-                            to={
-                              department?.name ===
-                              "General Admin Department"
-                                ? "/general-admin-department"
-                                : department?.name ===
-                                  "Town Planning"
-                                ? "/town-planning"
-                                : `/${department?.name
-                                    .toLowerCase()
-                                    .replace(/\s+/g, "-")}`
-                            }
-                            state={{ id: department?.id }}
-                          >
+                          <Link to={departmentLink} state={departmentState}>
                             <span>Read More</span>
                           </Link>
                         </div>
@@ -113,7 +109,8 @@ const Departments = () => {
                     </div>
                   </div>
                 </div>
-            ))}
+              );
+            })}
           </div>
         </div>
         <div className="pagination-wrapper centred">
