@@ -230,9 +230,8 @@ const FireStation = () => {
               </li>
             ))}
             <li
-              className={`page-item ${
-                currentPage === totalPages ? "disabled" : ""
-              }`}
+              className={`page-item ${currentPage === totalPages ? "disabled" : ""
+                }`}
             >
               <button
                 className="page-link"
@@ -274,7 +273,12 @@ const FireStation = () => {
           )}
 
           {showEditModal && (
-            <div className="modal fade show d-block" tabIndex="-1">
+            <div className="modal fade show d-block" 
+            style={{
+              overflowY: "auto",
+              maxHeight: "100vh",
+              scrollbarWidth: "none",
+            }} tabIndex="-1">
               <div className="modal-dialog modal-dialog-centered">
                 <div className="modal-content">
                   <div className="modal-header">
