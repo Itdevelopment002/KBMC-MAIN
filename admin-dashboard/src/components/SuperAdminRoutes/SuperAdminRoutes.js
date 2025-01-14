@@ -164,8 +164,8 @@ function SuperAdminRoutes() {
         <Route path="/add-ponds-talao" element={<AddPondsAndTalao />} />
         <Route path="/fire-station" element={<FireStation />} />
         <Route path="/add-fire-station" element={<AddFireStation />} />
-        <Route path="/private-hospital" element={<PrivateHospital />} />
-        <Route path="/add-private-hospital" element={<AddPrivateHospital />} />
+        <Route path="/hospital" element={<PrivateHospital />} />
+        <Route path="/add-hospital" element={<AddPrivateHospital />} />
         <Route path="/health" element={<Health />} />
         <Route path="/history" element={<History />} />
         <Route path="/add-co" element={<AddCo />} />

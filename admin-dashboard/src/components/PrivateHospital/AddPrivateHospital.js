@@ -72,7 +72,7 @@ const AddPrivateHospital = () => {
           beds: "",
           facilities: "",
         });
-        navigate("/private-hospital");
+        navigate("/hospital");
       }
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -88,17 +88,17 @@ const AddPrivateHospital = () => {
               <Link to="/home">Home</Link>
             </li>
             <li className="breadcrumb-item">
-              <Link to="/private-hospital">Private Hospital</Link>
+              <Link to="/private-hospital">Hospital</Link>
             </li>
             <li className="breadcrumb-item active" aria-current="page">
-              Add Private Hospital
+              Add Hospital
             </li>
           </ol>
           <div className="row">
             <div className="col-lg-12">
               <div className="card-box">
                 <div className="card-block">
-                  <h4 className="page-title">Add Private Hospital</h4>
+                  <h4 className="page-title">Add Hospital</h4>
                   <form onSubmit={handleSubmit}>
                     <div className="row">
                       <div className="col-md-5">

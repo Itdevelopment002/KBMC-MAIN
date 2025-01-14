@@ -24,13 +24,13 @@ const Pmay = () => {
         </div>
         <div className="auto-container">
           <div className="content-box">
-            <h1>PMAY</h1>
+            <h1>PMAY 1.0</h1>
             <ul className="bread-crumb clearfix">
               <li>
                 <Link to="#.">Schemes</Link>
               </li>
               <li>
-                <span>PMAY</span>
+                <span>PMAY 1.0</span>
               </li>
             </ul>
           </div>

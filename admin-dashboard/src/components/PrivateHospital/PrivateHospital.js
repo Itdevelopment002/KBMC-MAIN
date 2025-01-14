@@ -118,7 +118,7 @@ const PrivateHospital = () => {
               <Link to="/home">Home</Link>
             </li>
             <li className="breadcrumb-item active" aria-current="page">
-              Private Hospital
+              Hospital
             </li>
           </ol>
           <div className="row">
@@ -127,11 +127,11 @@ const PrivateHospital = () => {
                 <div className="card-block">
                   <div className="row">
                     <div className="col-sm-4 col-3">
-                      <h4 className="page-title">Add Private Hospital</h4>
+                      <h4 className="page-title">Add Hospital</h4>
                     </div>
                     <div className="col-sm-8 col-9 text-right">
                       <Link
-                        to="/add-private-hospital"
+                        to="/add-hospital"
                         className="btn btn-primary btn-rounded float-right"
                       >
                         <i className="fa fa-plus"></i> Add Hospital
