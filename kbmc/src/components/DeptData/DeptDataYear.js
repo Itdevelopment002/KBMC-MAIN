@@ -168,13 +168,14 @@ const DeptDataYear = () => {
                                   {records.map((record, idx) => (
                                     <li key={idx}>
                                       <Link
-                                        to={`${baseURL}/${record.pdf}`}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                      >
+  to={record.pdf.startsWith("http") ? record.pdf : `${baseURL}/${record.pdf}`}
+  target="_blank"
+  rel="noreferrer"
+>
                                         {record.pdfheading}
                                       </Link>
                                     </li>
+                                    
                                   ))}
                                 </ul>
                               </div>

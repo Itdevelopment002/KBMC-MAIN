@@ -41,13 +41,13 @@ const PrivateHospital = () => {
         </div>
         <div className="auto-container">
           <div className="content-box">
-            <h1>Private Hospital</h1>
+            <h1>Hospital</h1>
             <ul className="bread-crumb clearfix">
               <li>
                 <Link to="#.">City Profile</Link>
               </li>
               <li>
-                <span>Private Hospital</span>
+                <span>Hospital</span>
               </li>
             </ul>
           </div>
