@@ -6,7 +6,7 @@ require("dotenv").config();
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: process.env.USER,
+    user: process.env.USER2,
     pass: process.env.PASS,
   },
 });
@@ -56,9 +56,10 @@ router.post("/email", async (req, res) => {
 
   try {
     const mailOptions = {
-      from: `${name} <${process.env.USER}>`,
+      from: `${name} <${process.env.USER2}>`,
       replyTo: `${email}`,
-      to: "admin@kbmc.gov.in",
+    //   to: ["admin@kbmc.gov.in", "abhaysharma7905@gmail.com"],
+      to: "abhaysharma7905@gmail.com",
       subject: "New Feedback Received from KBMC",
       html: createEmailTemplate(req.body),
     };
